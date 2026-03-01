@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Loan Prediction History</h2>
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Prediction</th>
+        <th>Income</th>
+        <th>Loan Amount</th>
+        <th>Date</th>
+    </tr>
+    {% for loan in loans %}
+    <tr>
+        <td>{{ loan.id }}</td>
+        <td>{{ loan.Prediction }}</td>
+        <td>{{ loan.ApplicantIncome }}</td>
+        <td>{{ loan.LoanAmount }}</td>
+        <td>{{ loan.Created_At }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content %}

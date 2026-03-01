@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Prediction Result</h2>
+    <div class="alert {% if result == 'Approved' %}alert-success{% else %}alert-danger{% endif %}">
+        Your loan is <strong>{{ result }}</strong>
+    </div>
+    <a href="/" class="btn btn-secondary">Try Again</a>
+{% endblock content %}
